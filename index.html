@@ -1,0 +1,484 @@
+<!DOCTYPE HTML>
+<!--
+	Launcher by freehtml5.co
+	Twitter: http://twitter.com/fh5co
+	URL: http://freehtml5.co
+-->
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Flight Price Prediction</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	<div class="fh5co-loader"></div>
+
+	<aside id="fh5co-aside" role="sidebar" class="text-center" style="background-image: url(images/img_bg_1_gradient.jpg);">
+		<h1 id="fh5co-logo"><a href="index.html">Flight Price Prediction</a></h1>
+		<h2 id="predictedPrice"></h2>
+	</aside>
+
+	<div id="fh5co-main-content">
+		<div class="dt js-dt">
+			<div class="dtc js-dtc">
+				<!-- <div class="simply-countdown-one animate-box" data-animate-effect="fadeInUp"></div> -->
+				<div class="row">
+					<div class="col-sm-6" style="position:relative;left:20%;">
+						<!-- <div class="card" style="background:#ef8376;border-color:rgba(0,0,0,0);border-radius:15%;position:relative;left:-80%;"> -->
+							<!-- <div class="card-body"> -->
+								<h2 class="card-title" style="color:black;">Departure Date</h2>
+								<!-- Departure -->
+								<input type="datetime-local" class="datetimeHere" name="Dep_Time" id="Dep_Time" required="required"/>
+
+							<!-- </div> -->
+						<!-- </div> -->
+					</div>
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="col-sm-6" style="position:relative;left:45%;">
+						<!-- <div class="card" style="background:#ef8376;border-color:rgba(0,0,0,0);border-radius:15%;position:relative;left:70%;"> -->
+							<!-- <div class="card-body"> -->
+								<h2 class="card-title" style="color:black;">Arrival Date</h2>
+								<!-- Arrival -->
+								<input type="datetime-local" class="datetimeHere" name="Arrival_Time" id="Arrival_Time" required="required">
+							<!-- </div> -->
+						<!-- </div> -->
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-sm-6" style="position:relative;left:20%;">
+						<!-- <div class="card" style="background:#ef8376;border-color:rgba(0,0,0,0);border-radius:15%;position:relative;left:-20%;"> -->
+
+							<!-- <div class="card-body"> -->
+								<!-- Source -->
+								<h2 class="card-title" style="color:black;">Source</h2>
+								<select name="Source" class="dropDownHere"id="Source" required="required">
+									<option value="Delhi">Delhi</option>
+									<option value="Kolkata">Kolkata</option>
+									<option value="Mumbai">Mumbai</option>
+									<option value="Chennai">Chennai</option>
+								</select>
+							<!-- </div> -->
+						<!-- </div> -->
+					</div>
+					<div class="col-sm-6" style="position:relative;left:45%;">
+						<!-- <div class="card" style="background:#ef8376;border-color:rgba(0,0,0,0);border-radius:15%;position:relative;left:20%;"> -->
+
+							<!-- <div class="card-body"> -->
+								<h2 class="card-title" style="color:black;">Destination</h2>
+								<!-- Destination -->
+								<select name="Destination" class="dropDownHere" id="Destination" required="required">
+									<option value="Cochin">Cochin</option>
+									<option value="Delhi">Delhi</option>
+									<option value="New Delhi">New Delhi</option>
+									<option value="Hyderabad">Hyderabad</option>
+									<option value="Kolkata">Kolkata</option>
+								</select>
+							<!-- </div> -->
+						<!-- </div> -->
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-sm-6" style="position:relative;left:20%;">
+						<!-- <div class="card" style="background:#ef8376;border-color:rgba(0,0,0,0);border-radius:15%;"> -->
+							<!-- <div class="card-body"> -->
+								<h2 class="card-title" style="color:black">Stopage</h2>
+								<!-- Total Stops -->
+								<select name="stops" class="dropDownHere" id="total_stops" required="required">
+									<option value="0">Non-Stop</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+								</select>
+							<!-- </div> -->
+						<!-- </div> -->
+					</div>
+					<div class="col-sm-6" style="position:relative;left:45%;">
+						<!-- <div class="card" style="background:#ef8376;border-color:rgba(0,0,0,0);border-radius:15%;"> -->
+							<!-- <div class="card-body"> -->
+								<h2 class="card-title" style="color:black;">Select Airline</h2>
+								<!-- Airline -->
+								<select name="airline" class="dropDownHere" id="Airline" required="required">
+									<option value="Jet Airways">Jet Airways</option>
+									<option value="IndiGo">IndiGo</option>
+									<option value="Air India">Air India</option>
+									<option value="Multiple carriers">Multiple carriers</option>
+									<option value="SpiceJet">SpiceJet</option>
+									<option value="Vistara">Vistara</option>
+									<option value="Air Asia">Air Asia</option>
+									<option value="GoAir">GoAir</option>
+									<option value="Multiple carriers Premium economy">Multiple carriers Premium economy
+									</option>
+									<option value="Jet Airways Business">Jet Airways Business</option>
+									<option value="Vistara Premium economy">Vistara Premium economy</option>
+									<option value="Trujet">Trujet</option>
+								</select>
+							<!-- </div> -->
+						<!-- </div> -->
+					</div>
+
+				</div>
+				<br>
+				<br>
+				<button style='position:relative;left:80%;'onclick="predict()">Predict</button>
+
+				<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.5.2/dist/tf.min.js"></script>
+
+				<script>
+					tf.loadLayersModel("dnn/model.json").then(function(model) {
+								window.model = model;
+								console.log("my model loaded");
+								});
+					function predict() {
+						var date_dep=document.getElementById('Dep_Time').value;
+						var a = date_dep.split('T');
+						var temp = a[0];
+						console.log(a[0].split('-'));
+						var b = a[0].split('-');
+						var journey_day=b[2];
+						var journey_month = b[1];
+
+						var c = a[1].split(':');
+						var dep_hour = c[0];
+						var dep_min = c[1];
+
+						var date_arrival = document.getElementById('Arrival_Time').value;
+
+						var a = date_arrival.split('T');
+						var b = a[1].split(':');
+						var arrival_hour = b[0];
+						var arrival_min = b[1];
+
+						var dur_hour = parseInt(arrival_hour) - parseInt(dep_hour);
+						var dur_min = parseInt(arrival_min) - parseInt(dep_min);
+
+						var total_stops = document.getElementById('total_stops').value;
+
+						var airline = document.getElementById('Airline').value;
+						if(airline=="Jet Airways"){
+							var jet_airways = 1;
+							var indigo = 0;
+							var air_india = 0;
+							var multiple_carriers = 0;
+							var spicejet = 0;
+							var vistara = 0;
+							var goair = 0;
+							var multiple_carriers_premium_economy = 0;
+							var jet_airways_business = 0;
+							var vistara_premium_economy = 0;
+							var trujet = 0;
+						}
+						else if (airline == 'IndiGo'){
+							var jet_airways = 0;
+							var indigo = 1;
+							var air_india = 0;
+							var multiple_carriers = 0;
+							var spicejet = 0;
+							var vistara = 0;
+							var goair = 0;
+							var multiple_carriers_premium_economy = 0;
+							var jet_airways_business = 0;
+							var vistara_premium_economy = 0;
+							var trujet = 0;
+						}
+						else if (airline == 'Air India'){
+							var jet_airways = 0;
+							var indigo = 0;
+							var air_india = 1;
+							var multiple_carriers = 0;
+							var spicejet = 0;
+							var vistara = 0;
+							var goair = 0;
+							var multiple_carriers_premium_economy = 0;
+							var jet_airways_business = 0;
+							var vistara_premium_economy = 0;
+							var trujet = 0;
+						}
+						else if (airline == 'Multiple carriers'){
+							var jet_airways = 0;
+							var indigo = 0;
+							var air_india = 0;
+							var multiple_carriers = 1;
+							var spicejet = 0;
+							var vistara = 0;
+							var goair = 0;
+							var multiple_carriers_premium_economy = 0;
+							var jet_airways_business = 0;
+							var vistara_premium_economy = 0;
+							var trujet = 0;
+						}
+						else if (airline == 'SpiceJet'){
+							var jet_airways = 0;
+							var indigo = 0;
+							var air_india = 0;
+							var multiple_carriers = 0;
+							var spicejet = 1;
+							var vistara = 0;
+							var goair = 0;
+							var multiple_carriers_premium_economy = 0;
+							var jet_airways_business = 0;
+							var vistara_premium_economy = 0;
+							var trujet = 0;
+						}
+						else if (airline == 'Vistara'){
+							var jet_airways = 0;
+							var indigo = 0;
+							var air_india = 0;
+							var multiple_carriers = 0;
+							var spicejet = 0;
+							var vistara = 1;
+							var goair = 0;
+							var multiple_carriers_premium_economy = 0;
+							var jet_airways_business = 0;
+							var vistara_premium_economy = 0;
+							var trujet = 0;
+						}
+						else if (airline == 'GoAir'){
+							var jet_airways = 0;
+							var indigo = 0;
+							var air_india = 0;
+							var multiple_carriers = 0;
+							var spicejet = 0;
+							var vistara = 0;
+							var goair = 1;
+							var multiple_carriers_premium_economy = 0;
+							var jet_airways_business = 0;
+							var vistara_premium_economy = 0;
+							var trujet = 0;
+						}
+						else if (airline == 'Multiple carriers Premium economy'){
+							var jet_airways = 0;
+							var indigo = 0;
+							var air_india = 0;
+							var multiple_carriers = 0;
+							var spicejet = 0;
+							var vistara = 0;
+							var goair = 0;
+							var multiple_carriers_premium_economy = 1;
+							var jet_airways_business = 0;
+							var vistara_premium_economy = 0;
+							var trujet = 0;
+						}
+						else if (airline == 'Jet Airways Business'){
+							var jet_airways = 0;
+							var indigo = 0;
+							var air_india = 0;
+							var multiple_carriers = 0;
+							var spicejet = 0;
+							var vistara = 0;
+							var goair = 0;
+							var multiple_carriers_premium_economy = 0;
+							var jet_airways_business = 1;
+							var vistara_premium_economy = 0;
+							var trujet = 0;
+						}
+						else if (airline == 'Vistara Premium economy'){
+							var jet_airways = 0;
+							var indigo = 0;
+							var air_india = 0;
+							var multiple_carriers = 0;
+							var spicejet = 0;
+							var vistara = 0;
+							var goair = 0;
+							var multiple_carriers_premium_economy = 0;
+							var jet_airways_business = 0;
+							var vistara_premium_economy = 1;
+							var trujet = 0;
+						}
+						else if (airline == 'Trujet'){
+							var jet_airways = 0;
+							var indigo = 0;
+							var air_india = 0;
+							var multiple_carriers = 0;
+							var spicejet = 0;
+							var vistara = 0;
+							var goair = 0;
+							var multiple_carriers_premium_economy = 0;
+							var jet_airways_business = 0;
+							var vistara_premium_economy = 0;
+							var trujet = 1;
+						}
+						else{
+							var jet_airways = 0;
+							var indigo = 0;
+							var air_india = 0;
+							var multiple_carriers = 0;
+							var spicejet = 0;
+							var vistara = 0;
+							var goair = 0;
+							var multiple_carriers_premium_economy = 0;
+							var jet_airways_business = 0;
+							var vistara_premium_economy = 0;
+							var trujet = 1;
+						}
+
+						source = document.getElementById('Source').value;
+						if(source=="Delhi"){
+							var s_delhi = 1;
+							var s_kolkata = 0;
+							var s_mumbai = 0;
+							var s_chennai = 0;
+						}
+						else if(source=="Kolkata"){
+							var s_delhi = 0;
+							var s_kolkata = 1;
+							var s_mumbai = 0;
+							var s_chennai = 0;
+						}
+						else if(source=="Mumbai"){
+							var s_delhi = 0;
+							var s_kolkata = 0;
+							var s_mumbai = 1;
+							var s_chennai = 0;
+						}
+						else if(source=="Chennai"){
+							var s_delhi = 0;
+							var s_kolkata = 0;
+							var s_mumbai = 0;
+							var s_chennai = 1;
+						}
+						else{
+							var s_delhi = 0;
+							var s_kolkata = 0;
+							var s_mumbai = 0;
+							var s_chennai = 0;
+						}
+
+						var destination = document.getElementById('Destination').value;
+
+						if(destination == 'Cochin'){
+							var d_cochin = 1;
+							var d_delhi = 0;
+							var d_new_delhi = 0;
+							var d_hyderabad = 0;
+							var d_kolkata = 0;
+						}
+						else if(destination == 'Delhi'){
+							var d_cochin = 0;
+							var d_delhi = 1;
+							var d_new_delhi = 0;
+							var d_hyderabad = 0;
+							var d_kolkata = 0;
+						}
+						else if(destination == 'New_Delhi'){
+							var d_cochin = 0;
+							var d_delhi = 0;
+							var d_new_delhi = 1;
+							var d_hyderabad = 0;
+							var d_kolkata = 0;
+						}
+						else if(destination == 'Hyderabad'){
+							var d_cochin = 0;
+							var d_delhi = 0;
+							var d_new_delhi = 0;
+							var d_hyderabad = 1;
+							var d_kolkata = 0;
+						}
+						else if(destination == 'Kolkata'){
+							var d_cochin = 0;
+							var d_delhi = 0;
+							var d_new_delhi = 0;
+							var d_hyderabad = 0;
+							var d_kolkata = 1;
+						}
+						else{
+							var d_cochin = 0;
+							var d_delhi = 0;
+							var d_new_delhi = 0;
+							var d_hyderabad = 0;
+							var d_kolkata = 0;
+						}
+
+						input = [parseInt(total_stops),parseInt(journey_day),parseInt(journey_month),parseInt(dep_hour),parseInt(dep_min),parseInt(arrival_hour),parseInt(arrival_min),parseInt(dur_hour),parseInt(dur_min),parseInt(air_india),parseInt(goair),parseInt(indigo),parseInt(jet_airways),parseInt(jet_airways_business),parseInt(multiple_carriers),parseInt(multiple_carriers_premium_economy),parseInt(spicejet),parseInt(trujet),parseInt(vistara),parseInt(vistara_premium_economy),parseInt(s_chennai),parseInt(s_delhi),parseInt(s_kolkata),parseInt(s_mumbai),parseInt(d_cochin),parseInt(d_delhi),parseInt(d_hyderabad),parseInt(d_kolkata),parseInt(d_new_delhi)]
+						window.model.predict([tf.tensor(input).reshape([1,29])]).array().then(function(scores){
+									scores = scores[0];
+									//predicted = scores.indexOf(Math.max(...scores));
+									// $('#number').html(predicted);
+									//console.log(predicted);
+									console.log(scores[0]);
+									document.getElementById('predictedPrice').innerHTML="Predicted Price is " + scores[0].toFixed(2).toString();
+								});
+					}
+					
+				</script>
+
+					
+			</div>
+		</div>
+
+		<div id="fh5co-footer">
+			<div class="row">
+				<div class="col-md-6">
+					<!-- <ul id="fh5co-social">
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-instagram"></i></a></li>
+						<li><a href="#"><i class="icon-google-plus"></i></a></li>
+						<li><a href="#"><i class="icon-pinterest-square"></i></a></li>
+					</ul> -->
+				</div>
+				<div class="col-md-6 fh5co-copyright">
+					<p>Designed by <a href="#" target="_blank">Saurabh Modi
+
+					</p>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Count Down -->
+	<script src="js/simplyCountdown.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
